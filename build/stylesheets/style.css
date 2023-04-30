@@ -1,0 +1,145 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+body p {
+  margin: 0;
+}
+body main {
+  background-color: hsl(0, 0%, 100%);
+  display: inline-block;
+  padding: 40px 20px;
+  border-radius: 30px;
+  border-bottom-right-radius: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+body main .forInputsWrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+@media only screen and (max-width: 600px) {
+  body main .forInputsWrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+body main .forInputsWrap .formInputs label {
+  color: hsl(0, 1%, 44%);
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+body main .forInputsWrap .formInputs label.labelWarning {
+  color: hsl(0, 100%, 67%);
+}
+body main .forInputsWrap .formInputs input {
+  font-size: 32px;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 600px) {
+  body main .forInputsWrap .formInputs input {
+    font-size: 26px;
+  }
+}
+body main .forInputsWrap .formInputs input:active {
+  border-color: hsl(259, 100%, 65%);
+  outline: hsl(259, 100%, 65%);
+}
+body main .forInputsWrap .formInputs input:focus-visible {
+  border-color: hsl(259, 100%, 65%);
+  outline: hsl(259, 100%, 65%);
+}
+body main .forInputsWrap .formInputs input.inputWarning {
+  border-color: hsl(0, 100%, 67%);
+}
+body main .forInputsWrap .formInputs .pWarning {
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+}
+@media only screen and (max-width: 600px) {
+  body main .forInputsWrap .formInputs .pWarning {
+    font-size: 12px;
+  }
+}
+body main .formSubmit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  body main .formSubmit {
+    position: relative;
+    margin: 70px 0px;
+  }
+}
+body main .formSubmit hr {
+  width: 100%;
+  border-top: solid 1px hsl(0, 0%, 94%);
+}
+body main .formSubmit button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+@media only screen and (max-width: 600px) {
+  body main .formSubmit button {
+    position: absolute;
+  }
+}
+body main .formSubmit button span {
+  padding: 30px;
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+body main .formSubmit button span:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body input[type=number] {
+  -moz-appearance: textfield;
+}
+body .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+body .ageTotals p {
+  font-size: 96px;
+  line-height: 1.2;
+  font-style: italic;
+  font-weight: 800;
+  color: hsl(0, 0%, 8%);
+}
+@media only screen and (max-width: 600px) {
+  body .ageTotals p {
+    font-size: 40px;
+  }
+}
+body .ageTotals p span {
+  color: hsl(259, 100%, 65%);
+}
+
+/*# sourceMappingURL=style.css.map */
