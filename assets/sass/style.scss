@@ -1,0 +1,179 @@
+// Variables
+
+//breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+
+//colors
+// ### Primary
+
+$purple: hsl(259, 100%, 65%);
+$lightRed: hsl(0, 100%, 67%);
+
+// ### Neutral
+$white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 0%, 94%);
+$lightGrey: hsl(0, 0%, 86%);
+$smokeyGrey: hsl(0, 1%, 44%);
+$offBlack: hsl(0, 0%, 8%);
+
+// Typography
+$fontInput: 32px;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $offWhite;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+
+  p {
+    margin: 0;
+  }
+
+  main {
+    background-color: $white;
+    display: inline-block;
+    padding: 40px 20px;
+    border-radius: 30px;
+    border-bottom-right-radius: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .forInputsWrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+
+      @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .formInputs {
+
+        label {
+          color: $smokeyGrey;
+          font-weight: 400;
+          letter-spacing: 3px;
+
+          &.labelWarning {
+            color: $lightRed;
+          }
+        }
+        input {
+          font-size: 32px;
+          width: 100%;
+          max-width: 200px;
+          padding: 10px;
+          border-radius: 10px;
+          border: solid 1px $lightGrey;
+          color: $offBlack;
+          font-weight: 700;
+          box-sizing: border-box;
+
+          @media only screen and (max-width: 600px) {
+            font-size: 26px;
+        }
+
+          &:active {
+            border-color: $purple;
+            outline: $purple;
+          }
+
+          &:focus-visible {
+            border-color: $purple;
+            outline: $purple;
+          }
+          
+          &.inputWarning {
+            border-color: $lightRed;
+          }
+        }
+        .pWarning {
+            color: $lightRed;
+            font-style: italic;
+
+            @media only screen and (max-width: 600px) {
+                font-size: 12px;
+            }
+        }
+      }
+    }
+
+    .formSubmit {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width: 600px) {
+        position: relative;
+        margin: 70px 0px;
+    }
+
+      hr {
+        width: 100%;
+        border-top: solid 1px $offWhite;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        @media only screen and (max-width: 600px) {
+            position: absolute;
+        }
+        span {
+          padding: 30px;
+          border-radius: 50%;
+          color: $white;
+          background-color: $purple;
+          cursor: pointer;
+          transition: all 0.4s ease;
+          -webkit-transition: all 0.4s ease;
+
+          &:hover {
+            background-color: $offBlack;
+          }
+        }
+      }
+    }
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  .ageTotals {
+    p {
+      font-size: 96px;
+      line-height: 1.2;
+      font-style: italic;
+      font-weight: 800;
+      color: $offBlack;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 40px;
+    }
+
+      span {
+        color: $purple;
+      }
+    }
+  }
+}

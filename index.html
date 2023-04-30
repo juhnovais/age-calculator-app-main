@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/stylesheets/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/javascript/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form id="ageCalculator">
+          <div class="forInputsWrap">
+            <div class="formInputs inputDay">
+              <label for="day">DAY</label><br />
+              <input type="number" id="day" value="" placeholder="DD" />
+            </div>
+            <div class="formInputs inputMonth">
+              <label for="month">MONTH</label><br />
+              <input type="number" id="month" value="" placeholder="MM" />
+            </div>
+            <div class="formInputs inputYear">
+              <label for="year">YEAR</label><br />
+              <input type="number" id="year" value="" placeholder="YYYY" />
+            </div>
+          </div>
+          <div class="formSubmit">
+            <hr></hr>
+            <button type="submit"><span class="material-symbols-outlined">south</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section class="ageTotals">
+        <p class="yearCalc"><span>--</span> years</p>
+        <p class="monthsCalc"><span>--</span> months</p>
+        <p class="daysCalc"><span>--</span> days</p>
+      </section>
+    </main>
+
+    
+  </body>
+</html>
