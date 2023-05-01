@@ -91,7 +91,7 @@ $(document).ready(function () {
 
     // Check day input
     
-    if (day > currentDay || day < 1 || day > lastDayOfMonth) {
+    if (day < 1 || day > lastDayOfMonth) {
       addWarningMessage(inputDay, "Must be a valid day");
       addWarningInput(inputMonth);
       addWarningInput(inputYear);
@@ -101,7 +101,10 @@ $(document).ready(function () {
     
     var diff_days = Math.floor(diff / (24 * 60 * 60 * 1000)); // divide by number of milliseconds in a day
     if(diff_days < 0) {
-
+      addWarningMessage(inputDay, "Must be a valid day");
+      addWarningInput(inputMonth);
+      addWarningInput(inputYear);
+      $(".monthsCalc span, .daysCalc span, .yearCalc span").text("--");
     } else {
       $(".daysCalc span").text(diff_days);
     }
